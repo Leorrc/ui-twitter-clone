@@ -9,20 +9,16 @@ interface AppThemeProviderProps {
 const ThemeContext = createContext({} as any)
 
 export default function ThemeContextProvider({ children }: AppThemeProviderProps) {
-  const [theme, setTheme] = useState<string>(
-    localStorage.getItem("theme") ?? "dark"
-  )
+  const [theme, setTheme] = useState<string>("light")
 
   useEffect(() => {
     const root = window.document.documentElement
 
-    const removeOldTheme = theme === "dark" ? "light" : "dark"
 
-    root.classList.remove(removeOldTheme)
     root.classList.add(theme)
     localStorage.setItem("theme", theme)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [theme])
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

@@ -1,13 +1,12 @@
-import { useState } from "react"
+import { useTheme } from "../hooks/useTheme"
 
 export function ButtonTheme() {
-  const [theme, setTheme] = useState("light")
+  const { theme, setTheme } = useTheme()
 
   function handleThemeSwitch() {
     const sound = new Audio('/sound/sound.mp3')
 
     sound.play()
-
     if (theme !== "dark") {
       document.documentElement.classList.add("dark")
       setTheme("dark")
