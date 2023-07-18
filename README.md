@@ -19,6 +19,10 @@
 
 ## 🚀 Preview
 
+
+https://github.com/Leorrc/ui-twitter-clone/assets/100796907/4eeaca3a-fa93-430e-bcd4-f379a6719d47
+
+
 </div>
 
 <p align="center">
